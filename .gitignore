@@ -6,3 +6,9 @@ node_modules/
 .DS_Store
 .astro/
 .wrangler/
+
+# Local QA captures
+*.webp
+*-screenshot.png
+*-final.png
+*-recheck.png
