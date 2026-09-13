@@ -6,7 +6,7 @@
 
 @layer base {
   html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
-  body { @apply bg-ivory-50 text-rose-950 font-sans antialiased; }
+  body { @apply overflow-x-hidden bg-ivory-50 text-rose-950 font-sans antialiased; }
   ::selection { @apply bg-gold-300 text-rose-950; }
 }
 
@@ -20,4 +20,15 @@
     @apply inline-flex min-h-11 w-full items-center justify-center rounded-full border border-white/35 bg-white/10 px-7 py-3 text-sm font-medium tracking-wide text-white backdrop-blur transition hover:bg-white/20 sm:w-auto;
   }
   .card { @apply rounded-3xl border border-rose-100 bg-white/80 p-6 shadow-sm backdrop-blur sm:p-7; }
+
+  /* Desktop keeps the Stream frame aspect; mobile uses min-height so the video is not crushed under copy */
+  .hero-stream {
+    aspect-ratio: auto;
+  }
+  @media (min-width: 640px) {
+    .hero-stream {
+      aspect-ratio: 1296 / 704;
+      min-height: 0;
+    }
+  }
 }

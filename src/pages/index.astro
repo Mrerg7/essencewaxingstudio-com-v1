@@ -11,29 +11,31 @@ const STREAM_SRC =
   <Header />
 
   <main class="flex-1">
-    <section class="relative bg-rose-950">
-      <div class="relative w-full" style="padding-top: 54.32098765432099%;">
+    <section class="relative overflow-hidden bg-rose-950">
+      <!-- Tall min-height on mobile so Stream poster/video stays visible above copy -->
+      <div class="hero-stream relative w-full min-h-[78svh] sm:min-h-0">
         <iframe
           src={STREAM_SRC}
           title="Essence Waxing Studio hero video"
-          loading="lazy"
-          style="border: none; position: absolute; top: 0; left: 0; height: 100%; width: 100%;"
+          loading="eager"
+          class="absolute inset-0 h-full w-full border-0"
+          style="border: none;"
           allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
           allowfullscreen="true"
         ></iframe>
-        <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-rose-950 via-rose-950/50 to-rose-950/20"></div>
+        <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-rose-950 via-rose-950/35 to-transparent sm:via-rose-950/45 sm:to-rose-950/15"></div>
         <div class="absolute inset-0 flex items-end">
-          <div class="container-narrow w-full pb-6 pt-16 sm:pb-12 sm:pt-20">
-            <p class="mb-3 text-[10px] font-medium uppercase tracking-widestx text-gold-300 sm:text-xs">
+          <div class="container-narrow w-full pb-8 pt-24 sm:pb-12 sm:pt-20">
+            <p class="mb-2 text-[10px] font-medium uppercase tracking-widestx text-gold-300 sm:mb-3 sm:text-xs">
               Brazilian Waxing · Hard Wax · Private Studio
             </p>
-            <h1 class="font-display text-4xl font-semibold leading-[0.95] text-white sm:text-6xl lg:text-7xl">
+            <h1 class="font-display text-[2.35rem] font-semibold leading-[0.95] text-white sm:text-6xl lg:text-7xl">
               Essence <span class="italic text-gold-300">Waxing Studio</span>
             </h1>
-            <p class="mt-4 max-w-lg text-sm leading-relaxed text-ivory-100/90 sm:mt-5 sm:text-lg">
+            <p class="mt-3 max-w-lg text-sm leading-relaxed text-ivory-100/90 sm:mt-5 sm:text-lg">
               A quiet, appointment-led studio concept for Brazilian waxing — precise work, lasting smoothness.
             </p>
-            <div class="mt-6 flex flex-col gap-2 sm:mt-8 sm:flex-row sm:gap-3">
+            <div class="mt-5 flex flex-col gap-2 sm:mt-8 sm:flex-row sm:gap-3">
               <a href="#method" class="btn-primary pointer-events-auto">The Method</a>
               <a href="#acquisition" class="btn-secondary pointer-events-auto">Domain Available</a>
             </div>
