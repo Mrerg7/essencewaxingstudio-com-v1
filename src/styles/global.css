@@ -42,7 +42,8 @@
     min-height: 100%;
     width: auto;
     height: auto;
-    transform: translate(-50%, -50%);
+    /* Slight overscan crops Stream player chrome / residual letterbox edges */
+    transform: translate(-50%, -50%) scale(1.12);
   }
   .hero-stream__frame iframe {
     position: absolute;
