@@ -15,8 +15,10 @@ const {
   title = 'Essence Waxing Studio | Refined Brazilian Waxing',
   description = 'An elegant waxing studio concept for Brazilian and sensitive-area hard wax. Smooth results for 3 to 4 weeks. Domain available.',
   ogImage = POSTER,
-  canonical = 'https://essencewaxingstudio.com/',
 } = Astro.props;
+
+const canonical =
+  Astro.props.canonical ?? new URL(Astro.url.pathname, Astro.site).toString();
 
 const siteName = 'Essence Waxing Studio';
 ---
