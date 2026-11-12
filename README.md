@@ -11,8 +11,8 @@ Premium exact-match domain for a boutique waxing studio — Brazilian wax, hard 
 - Buyer FAQ section targeting domain-acquisition queries (price, escrow, transfer safety)
 - Inquiry form with pre-filled mailto, sticky mobile "$50,000 / Make an offer" bar, header price CTAs
 - Escrow.com trust signals, delivery/return terms, 3-step purchase process
-- Real 404s (no soft-404s), permanent host/trailing-slash canonicalization, security headers, `/sitemap.xml` rewrite
-- `llms.txt` for AI crawlers
+- Real 404s (no soft-404s); www/http one-hop 301 to apex; same-host trailing-slash / `index.html` aliases soft-served at **200** with `Link: rel=canonical` (no GSC "Page with redirect")
+- Security headers, `/sitemap.xml` rewrite, `llms.txt` for AI crawlers
 
 ## Local development
 

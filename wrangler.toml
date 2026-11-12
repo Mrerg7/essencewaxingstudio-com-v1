@@ -17,6 +17,7 @@ run_worker_first = true
 # Serve the 404 document with a real 404 status (no soft-404).
 not_found_handling = "404-page"
 # Keep force-trailing-slash so "/" and directory URLs map to index.html; the
-# Worker intercepts alias paths first so GSC never sees Cloudflare's temporary
-# 307s ("Page with redirect") — same-host aliases are 200 or permanent 301.
+# Worker intercepts alias paths first and soft-serves them at 200 with a
+# Link canonical — GSC never sees same-host 307/301 "Page with redirect".
+# Unknown paths 404 immediately (no redirect → 404 chain).
 html_handling = "force-trailing-slash"
